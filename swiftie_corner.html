@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#21152f">
+<title>The Swiftie Corner ✨</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+:root{--bg:#100d19;--card:#211a2d;--text:#fff8f1;--muted:#c8bacf;--pink:#f5a9c8;--lilac:#c8b4ff;--gold:#f4d58d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 10%,#42264d 0,transparent 28%),radial-gradient(circle at 85% 35%,#292b59 0,transparent 30%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1080px,92%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px}.brand{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--pink)}.navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}.navlinks a:hover{color:white}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 0 90px;position:relative}.spark{color:var(--gold);font-size:1.5rem;letter-spacing:1rem}.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.75rem;color:var(--pink);font-weight:700}.hero h1{font:800 clamp(3rem,9vw,6.6rem)/.98 'Playfair Display',serif;margin:18px auto;max-width:850px}.hero h1 span{color:var(--pink);font-style:italic}.hero p{max-width:600px;margin:22px auto;color:var(--muted);font-size:1.08rem}.btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(120deg,#f5a9c8,#c8b4ff);color:#24172d;font-weight:800;border:0;border-radius:999px;padding:13px 22px;cursor:pointer;box-shadow:0 10px 30px #0004;transition:.2s}.btn:hover{transform:translateY(-3px);filter:brightness(1.07)}.ghost{background:#ffffff12;color:var(--text);border:1px solid #ffffff2b;box-shadow:none}
+.section{padding:68px 0}.section-head{text-align:center;margin-bottom:32px}.section-head h2{font:700 clamp(2rem,5vw,3.1rem) 'Playfair Display',serif;margin:8px 0}.section-head p{color:var(--muted);margin:0 auto;max-width:620px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.era{border:1px solid #ffffff20;border-radius:20px;min-height:180px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative;transition:.2s}.era:hover{transform:translateY(-5px)}.era b{font:700 1.3rem 'Playfair Display',serif}.era small{opacity:.85}.era .num{font-size:2.3rem;align-self:flex-end;opacity:.8}.e1{background:linear-gradient(140deg,#8e5b71,#e9a6b9)}.e2{background:linear-gradient(140deg,#a57a3d,#f3d68e);color:#291e1b}.e3{background:linear-gradient(140deg,#a64255,#e78b9d)}.e4{background:linear-gradient(140deg,#a8a3a1,#e5d9d4);color:#29232b}.e5{background:linear-gradient(140deg,#375b9a,#86b3df)}.e6{background:linear-gradient(140deg,#46345f,#a18ac9)}.e7{background:linear-gradient(140deg,#657a60,#b8c7a1);color:#18231a}.e8{background:linear-gradient(140deg,#684b3f,#c7a18c)}.e9{background:linear-gradient(140deg,#8d243d,#e47d89)}.e10{background:linear-gradient(140deg,#314b68,#8fa8bd)}.e11{background:linear-gradient(140deg,#493b70,#a89ad6)}.e12{background:linear-gradient(140deg,#6a394c,#d59bb2)}
+.panel{background:linear-gradient(145deg,#ffffff12,#ffffff07);border:1px solid #ffffff20;border-radius:26px;padding:clamp(22px,4vw,36px);box-shadow:0 20px 60px #0002}.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.playlist{display:grid;gap:10px;margin-top:18px}.track{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-radius:13px;background:#ffffff0c}.track span{color:var(--muted);font-size:.85rem}.note{color:var(--muted);font-size:.92rem}.quizbox{text-align:center}.question{font:700 1.45rem 'Playfair Display',serif;margin:8px 0 22px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:600px;margin:0 auto}.answer{background:#ffffff0c;border:1px solid #ffffff26;color:white;padding:13px;border-radius:14px;cursor:pointer;font:inherit}.answer:hover{background:#f5a9c82b;border-color:var(--pink)}#quizResult{min-height:28px;color:var(--gold);margin:16px 0 0;font-weight:700}
+.kanye{background:linear-gradient(135deg,#29213a,#4a2840);border:1px solid #f5a9c855;position:relative;overflow:hidden}.kanye:after{content:"YE";position:absolute;right:10px;bottom:-75px;font:900 13rem 'Playfair Display',serif;color:#ffffff0a;pointer-events:none}.kanye-tag{display:inline-block;background:#f5a9c8;color:#24172d;font-weight:900;padding:5px 11px;border-radius:99px;font-size:.72rem;letter-spacing:.1em}.kanye h3{font:700 2.2rem 'Playfair Display',serif;margin:12px 0}.kanye p{color:#dfd2e3;max-width:600px}.reveal{display:none;margin-top:18px;padding:17px;border-radius:16px;background:#0e0b16;border:1px dashed #f5a9c8;position:relative;z-index:1}.reveal.show{display:block;animation:pop .35s ease}@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+.footer{text-align:center;padding:45px 0 60px;color:var(--muted);font-size:.9rem}.footer strong{color:var(--pink)}.tiny{font-size:.78rem;color:#aa9db5}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#f5a9c8;color:#24172d;padding:11px 17px;border-radius:99px;font-weight:800;opacity:0;transition:.25s;pointer-events:none;z-index:9}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.hero{min-height:70vh}.answers{grid-template-columns:1fr}}
+@media(max-width:390px){.grid{gap:9px}.era{min-height:155px;padding:14px}.era b{font-size:1.1rem}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#top">✦ The Swiftie Corner</a>
+  <nav class="navlinks"><a href="#eras">The Eras</a><a href="#playlist">Playlist</a><a href="#quiz">Quiz</a><a href="#drama">A visita inesperada</a></nav>
+</header>
+<main id="top">
+<section class="hero wrap">
+  <div>
+    <div class="spark">✧ ✦ ✧</div>
+    <div class="eyebrow">um cantinho feito especialmente pra você</div>
+    <h1>Welcome to the <span>Swiftie</span> universe.</h1>
+    <p>Um passeio por eras, músicas, curiosidades e uma pequena dose de caos pop. Porque ser fã da Taylor nunca é só ouvir música. ✨</p>
+    <a class="btn" href="#eras">Começar a tour ✨</a>
+  </div>
+</section>
+
+<section class="section wrap" id="eras">
+  <div class="section-head"><div class="eyebrow">12 capítulos, muitas versões</div><h2>The Eras Gallery</h2><p>Cada era tem sua própria energia. Qual delas combina com seu humor hoje?</p></div>
+  <div class="grid">
+    <article class="era e1"><b>Debut</b><small>O começo de tudo</small><span class="num">♡</span></article>
+    <article class="era e2"><b>Fearless</b><small>Brilho e coração aberto</small><span class="num">✧</span></article>
+    <article class="era e3"><b>Speak Now</b><small>Uma história em cada faixa</small><span class="num">✦</span></article>
+    <article class="era e4"><b>Red</b><small>Sentimentos em technicolor</small><span class="num">♥</span></article>
+    <article class="era e5"><b>1989</b><small>Pop, cidade e liberdade</small><span class="num">☼</span></article>
+    <article class="era e6"><b>Reputation</b><small>Reinvenção e atitude</small><span class="num">✕</span></article>
+    <article class="era e7"><b>Lover</b><small>Um mundo em tons pastel</small><span class="num">♡</span></article>
+    <article class="era e8"><b>Folklore</b><small>Histórias para imaginar</small><span class="num">❧</span></article>
+    <article class="era e9"><b>Evermore</b><small>Um outono sem fim</small><span class="num">🍂</span></article>
+    <article class="era e10"><b>Midnights</b><small>Pensamentos depois da meia-noite</small><span class="num">☾</span></article>
+    <article class="era e11"><b>TTPD</b><small>Poesia, drama e páginas</small><span class="num">✒</span></article>
+    <article class="era e12"><b>The Anthology</b><small>Mais uma página da história</small><span class="num">✧</span></article>
+  </div>
+</section>
+
+<section class="section wrap" id="playlist">
+  <div class="two">
+    <div class="panel">
+      <div class="eyebrow">aperta o play (na imaginação)</div>
+      <h2 style="font:700 2rem 'Playfair Display';margin:8px 0">Swiftie soundtrack 🎧</h2>
+      <p class="note">Uma mini seleção para passear por diferentes fases. Você pode abrir cada música no seu serviço de streaming favorito.</p>
+      <div class="playlist">
+        <a class="track" href="https://open.spotify.com/search/Cruel%20Summer%20Taylor%20Swift" target="_blank" rel="noopener"><b>01 · Cruel Summer</b><span>Lover ↗</span></a>
+        <a class="track" href="https://open.spotify.com/search/Style%20Taylor%20Swift" target="_blank" rel="noopener"><b>02 · Style</b><span>1989 ↗</span></a>
+        <a class="track" href="https://open.spotify.com/search/august%20Taylor%20Swift" target="_blank" rel="noopener"><b>03 · august</b><span>Folklore ↗</span></a>
+        <a class="track" href="https://open.spotify.com/search/Anti-Hero%20Taylor%20Swift" target="_blank" rel="noopener"><b>04 · Anti-Hero</b><span>Midnights ↗</span></a>
+        <a class="track" href="https://open.spotify.com/search/You%20Belong%20With%20Me%20Taylor%20Swift" target="_blank" rel="noopener"><b>05 · You Belong With Me</b><span>Fearless ↗</span></a>
+      </div>
+    </div>
+    <div class="panel" style="display:flex;flex-direction:column;justify-content:center">
+      <div class="eyebrow">um lembrete importante</div>
+      <h2 style="font:700 2rem 'Playfair Display';margin:8px 0">In my Swiftie era ✨</h2>
+      <p>Não importa se você é fã desde o começo ou se chegou ontem: sempre existe uma música da Taylor para cada momento aleatório da vida.</p>
+      <p class="note">Missão do dia: escolher uma era, colocar uma música e agir como se estivesse no próprio videoclipe.</p>
+      <button class="btn ghost" onclick="randomEra()">Sortear minha era</button>
+      <p id="eraResult" aria-live="polite" style="color:var(--gold);font-weight:700"></p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="quiz">
+  <div class="panel quizbox">
+    <div class="eyebrow">teste seus conhecimentos</div>
+    <h2 style="font:700 2.4rem 'Playfair Display';margin:8px 0">Swiftie Quiz 🪩</h2>
+    <p class="note">Uma perguntinha rápida. Sem pesquisar, hein!</p>
+    <div class="question" id="question">Qual álbum tem a música "Anti-Hero"?</div>
+    <div class="answers" id="answers">
+      <button class="answer" onclick="answer(0)">1989</button><button class="answer" onclick="answer(1)">Midnights</button><button class="answer" onclick="answer(2)">Red</button><button class="answer" onclick="answer(3)">Lover</button>
+    </div>
+    <div id="quizResult" aria-live="polite"></div>
+    <button class="btn ghost" id="next" onclick="nextQuestion()" style="display:none;margin-top:12px">Próxima pergunta</button>
+  </div>
+</section>
+
+<section class="section wrap" id="drama">
+  <div class="panel kanye">
+    <span class="kanye-tag">ALERTA DE PLOT TWIST</span>
+    <h3>Uma visita… inesperada.</h3>
+    <p>O passeio estava tranquilo. As eras, a playlist, o quiz… até que alguém resolveu aparecer sem ser convidado.</p>
+    <button class="btn" onclick="revealKanye()">NÃO CLIQUE AQUI 👀</button>
+    <div class="reveal" id="kanyeReveal" aria-live="polite">
+      <div style="font-size:2.4rem">🎤 🚨</div>
+      <h2 style="font:700 2rem 'Playfair Display';margin:4px 0">KANYE WEST ENTROU NO CHAT.</h2>
+      <p>Opa… alguém pode avisar que essa é uma página dedicada à Taylor? 😭</p>
+      <p style="font-weight:800;color:var(--pink)">Momento histórico de interrupção: desbloqueado.</p>
+      <button class="btn ghost" onclick="hideKanye()">Mandar de volta pra fora</button>
+    </div>
+    <p class="tiny" style="position:relative;z-index:1;margin-top:18px">Participação especial em clima de meme. Paz no fandom. 🤝</p>
+  </div>
+</section>
+</main>
+<footer class="footer wrap">
+  <div style="font-size:1.6rem;color:var(--pink)">✦ ✧ ✦</div>
+  <p>Feito com carinho, glitter imaginário e referências swifties.</p>
+  <strong>Friendship version — zero romance, 100% pop culture.</strong>
+  <p class="tiny">Este é um presente de fã, não um site oficial da Taylor Swift.</p>
+</footer>
+<div class="toast" id="toast">✨ Era sorteada!</div>
+<script>
+const eras=["Debut 💚","Fearless 💛","Speak Now 💜","Red ❤️","1989 🩵","Reputation 🖤","Lover 💗","Folklore 🩶","Evermore 🤎","Midnights 🌌","TTPD 🤍","The Anthology 🪶"];
+function randomEra(){const e=eras[Math.floor(Math.random()*eras.length)];document.getElementById('eraResult').textContent='Sua era de hoje: '+e;const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}
+function revealKanye(){document.getElementById('kanyeReveal').classList.add('show')}
+function hideKanye(){document.getElementById('kanyeReveal').classList.remove('show')}
+const qs=[
+{q:'Qual álbum tem a música “Anti-Hero”?',a:['1989','Midnights','Red','Lover'],c:1,ok:'Acertou! Você conhece sua discografia. 🌙',no:'Quase! “Anti-Hero” faz parte de Midnights.'},
+{q:'Qual é o número associado à era 1989?',a:['O ano de nascimento da Taylor','O ano em que o álbum foi lançado','O número de faixas bônus','Um número aleatório'],c:1,ok:'Isso! 1989 é uma referência ao ano em que ela nasceu.',no:'A resposta é o ano em que Taylor nasceu: 1989.'},
+{q:'Qual destas músicas é do álbum folklore?',a:['cardigan','Delicate','Karma','The Man'],c:0,ok:'Perfeito! cardigan é uma das faixas de folklore. 🍂',no:'A resposta é cardigan, do folklore.'}
+];let qi=0,locked=false;
+function loadQ(){locked=false;const q=qs[qi];document.getElementById('question').textContent=q.q;document.getElementById('answers').innerHTML=q.a.map((a,i)=>`<button class="answer" onclick="answer(${i})">${a}</button>`).join('');document.getElementById('quizResult').textContent='';document.getElementById('next').style.display='none'}
+function answer(i){if(locked)return;locked=true;const q=qs[qi];document.getElementById('quizResult').textContent=i===q.c?q.ok:q.no;document.getElementById('next').style.display='inline-flex'}
+function nextQuestion(){qi=(qi+1)%qs.length;loadQ()}
+</script>
+</body>
+</html>
